@@ -26,10 +26,11 @@ double CoreFuncs::Divide(double a, double b)
 */
 double AdvFuncs::Power(double a, double b)
 {
-	for (int i = 0; i < b; i++) {
-		a = a * a;
+	double c = a;
+	for (int i = 1; i < b; i++) {
+		c = c * a;
 	}
-	return a;
+	return c;
 }
 
 /*
