@@ -2,6 +2,31 @@
 using namespace BasicMath;
 
 /*
+	Functions for the coordinate class
+*/
+double coordinate::setVals(double a, double b)
+{
+	coordinate::x = a;
+	coordinate::y = b;
+}
+void coordinate::setX(double a)
+{
+	coordinate::x = a;
+}
+void coordinate::setY(double b)
+{
+	coordinate::y = b;
+}
+double coordinate::getX()
+{
+	return coordinate::x;
+}
+double coordinate::getY()
+{
+	return coordinate::y;
+}
+
+/*
 	Functions for the CoreFuncs class
 */
 double CoreFuncs::Add(double a, double b)
@@ -137,4 +162,18 @@ double GeometryFuncs::ConeVol(double a, double b)
 double GeometryFuncs::SphereVol(double a)
 {
 	return (4 / 3) * PI * AdvFuncs::Power(a, 3);
+}
+double GeometryFuncs::IntAngPoly(double a) 
+{
+	return (a - 2) * 180;
+}
+double GeometryFuncs::PointDist(coordinate a, coordinate b)
+{
+	return sqrt(AdvFuncs::Power((a.getX - b.getX), 2) + AdvFuncs::Power((a.getY - b.getY), 2));
+}
+coordinate GeometryFuncs::MidPoint(coordinate a, coordinate b)
+{
+	/*
+	CONTINUE HERE
+	*/
 }
