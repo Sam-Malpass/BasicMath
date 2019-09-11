@@ -29,6 +29,7 @@ namespace BasicMath
 
 	class AlgebraFuncs
 	{
+	public:
 		//Function declaration for Quadratic Formula
 		static std::vector<double> QuadraticFormula(double a, double b, double c);
 	};
