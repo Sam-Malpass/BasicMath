@@ -20,7 +20,17 @@ int main()
 	cout << a << " * " << b << " = " << c << endl;
 	c = CoreFuncs::Divide(a, b);
 	cout << a << " / " << b << " = " << c << endl;
-
+	cout << "Testing the AdvFuncs functions..." << endl;
+	a = 2;
+	b = 4;
+	c = AdvFuncs::Power(a, b); 
+	cout << a << " to the power of " << b << " is " << c << endl;
+	cout << "Testing the AlgebraFuncs functions..." << endl;
+	a = 1;
+	b = 4;
+	c = 3;
+	vector<double> tst = AlgebraFuncs::QuadraticFormula(a, b, c);
+	cout << "For equation X^2 + 4X + 3: X = " << tst[0] << " or X = " << tst[1];
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
