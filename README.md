@@ -1,3 +1,3 @@
-#BasicMath Library
-##By Samuel John Malpass
-<hr />
+BasicMath Library
+---
+By Samuel John Malpass
