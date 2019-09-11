@@ -33,6 +33,12 @@ namespace BasicMath
 	public:
 		//Function declaration for Quadratic Formula
 		static std::vector<double> QuadraticFormula(double a, double b, double c);
+
+		//Function declaration for Discriminant
+		static double Discriminant(double a, double b, double c);
+
+		//Function declaration for ParabolaVertex
+		static std::vector<double> ParabolaVertex(double a, double b, double c);
 	};
 
 	class GeometryFuncs
@@ -64,5 +70,23 @@ namespace BasicMath
 
 		//Function declaration for SphereArea
 		static double SphereArea(double a);
+
+		//Function declaration for CubeVol
+		static double CubeVol(double a);
+
+		//Function declaration for CuboidVol
+		static double CuboidVol(double a, double b, double c);
+
+		//Function declaration for RegPrismVol
+		static double RegPrismVol(double a, double b);
+
+		//Function declaration for CylinderVol
+		static double CylinderVol(double a, double b);
+
+		//Function declaration for ConeVol
+		static double ConeVol(double a, double b);
+
+		//Function declaration for SphereVol
+		static double SphereVol(double a);
 	};
 }

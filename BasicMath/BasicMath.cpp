@@ -39,11 +39,24 @@ double AdvFuncs::Power(double a, double b)
 std::vector<double> AlgebraFuncs::QuadraticFormula(double a, double b, double c)
 {
 	std::vector<double> data;
-	double x1 = ((-b + sqrt(AdvFuncs::Power(b, 2) - 4 * a * c)) / (2 * a));
-	double x2 = ((-b - sqrt(AdvFuncs::Power(b, 2) - 4 * a * c)) / (2 * a));
+	double x1 = ((-b + AlgebraFuncs::Discriminant(a, b, c)) / (2 * a));
+	double x2 = ((-b - AlgebraFuncs::Discriminant(a, b, c)) / (2 * a));
 	data.push_back(x1);
 	data.push_back(x2);
 	return data;
+}
+double AlgebraFuncs::Discriminant(double a, double b, double c)
+{
+	return AdvFuncs::Power(b, 2) - (4 * a * c);
+}
+std::vector<double> AlgebraFuncs::ParabolaVertex(double a, double b, double c)
+{
+	std::vector<double> vals;
+	double v1 = -b / (2 * a);
+	double v2 = -AlgebraFuncs::Discriminant(a, b, c)  / (4 * a);
+	vals.push_back(v1);
+	vals.push_back(v2);
+	return vals;
 }
 
 /*
