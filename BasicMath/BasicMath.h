@@ -1,4 +1,5 @@
 #pragma once
+#include <vector>
 /* BasicMath.h by Samuel John Malpass*/
 
 namespace BasicMath
@@ -17,5 +18,13 @@ namespace BasicMath
 
 		//Function declaration for Divide
 		static double Divide(double a, double b);
+	};
+
+	class AlgebraFuncs
+	{
+		//Function declaration for Quadratic Formula
+		static std::vector<double> QuadraticFormula(double a, double b, double c);
+
+
 	};
 }
