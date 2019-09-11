@@ -60,6 +60,22 @@ std::vector<double> AlgebraFuncs::ParabolaVertex(double a, double b, double c)
 }
 
 /*
+	Functions for the TrigFuncs Class
+*/
+double TrigFuncs::SinAng(double a, double b)
+{
+	return asin(a / b);
+}
+double TrigFuncs::CosAng(double a, double b)
+{
+	return acos(a / b);
+}
+double TrigFuncs::TanAng(double a, double b)
+{
+	return atan(a / b);
+}
+
+/*
 	Functions for the GeometryFuncs class
 */
 double GeometryFuncs::SquareArea(double a)

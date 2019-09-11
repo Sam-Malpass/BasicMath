@@ -1,5 +1,6 @@
 #pragma once
 #include <vector>
+#include <cmath>
 #define PI 3.14159265359
 /* BasicMath.h by Samuel John Malpass*/
 
@@ -39,6 +40,19 @@ namespace BasicMath
 
 		//Function declaration for ParabolaVertex
 		static std::vector<double> ParabolaVertex(double a, double b, double c);
+	};
+
+	class TrigFuncs
+	{
+	public:
+		//Function declaration for SinAng
+		static double SinAng(double a, double b);
+
+		//Function declaration for CosAng
+		static double CosAng(double a, double b);
+
+		//Function declaration for TanAng
+		static double TanAng(double a, double b);
 	};
 
 	class GeometryFuncs
