@@ -85,3 +85,27 @@ double GeometryFuncs::SphereArea(double a)
 {
 	return (4 * (PI * AdvFuncs::Power(a, 2)));
 }
+double GeometryFuncs::CubeVol(double a)
+{
+	return AdvFuncs::Power(a, 3);
+}
+double GeometryFuncs::CuboidVol(double a, double b, double c)
+{
+	return a * b * c;
+}
+double GeometryFuncs::RegPrismVol(double a, double b)
+{
+	return a * b;
+}
+double GeometryFuncs::CylinderVol(double a, double b)
+{
+	return (PI * AdvFuncs::Power(a, 2)) * b;
+}
+double GeometryFuncs::ConeVol(double a, double b)
+{
+	return (((1 / 3) * a) * b);
+}
+double GeometryFuncs::SphereVol(double a)
+{
+	return (4 / 3) * PI * AdvFuncs::Power(a, 3);
+}
