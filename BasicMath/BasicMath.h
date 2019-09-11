@@ -20,11 +20,16 @@ namespace BasicMath
 		static double Divide(double a, double b);
 	};
 
+	class AdvFuncs
+	{
+	public:
+		//Function declaration for Power
+		static double Power(double a, double b);
+	};
+
 	class AlgebraFuncs
 	{
 		//Function declaration for Quadratic Formula
 		static std::vector<double> QuadraticFormula(double a, double b, double c);
-
-
 	};
 }
