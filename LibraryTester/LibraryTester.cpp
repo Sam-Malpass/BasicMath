@@ -31,6 +31,12 @@ int main()
 	c = 3;
 	vector<double> tst = AlgebraFuncs::QuadraticFormula(a, b, c);
 	cout << "For equation X^2 + 4X + 3: X = " << tst[0] << " or X = " << tst[1];
+
+
+
+
+
+	cout << "End of test" << endl;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
