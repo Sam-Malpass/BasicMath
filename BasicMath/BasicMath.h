@@ -73,6 +73,12 @@ namespace BasicMath
 		static std::vector<double> Vec2Vec(std::vector<double> a, std::vector<double> b);
 		//Function declaration for VecMag
 		static double VecMag(std::vector<double> a);
+		//Function declaration for VecMagSq
+		static double VecMagSq(std::vector<double> a);
+
+		static std::vector<double> VecAdd(std::vector<double> a, std::vector<double> b);
+		static std::vector<double> VecMult(double a, std::vector<double> b);
+		static double DotProd(std::vector<double> a, std::vector<double> b);
 	};
 
 	class GeometryFuncs

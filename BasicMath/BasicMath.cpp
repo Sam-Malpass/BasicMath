@@ -146,6 +146,48 @@ double VectorFuncs::VecMag(std::vector<double> a)
 	}
 	return sqrt(tmp);
 }
+//Calculates the square magnitude of the vector
+double VectorFuncs::VecMagSq(std::vector<double> a)
+{
+	return AdvFuncs::Power(VectorFuncs::VecMag(a), 2);
+}
+//Adds two vectors together
+std::vector<double> VectorFuncs::VecAdd(std::vector<double> a, std::vector<double> b)
+{
+	std::vector<double> ab;
+	if (a.size() != b.size())
+	{
+		return ab;
+	}
+	for (int i = 0; i < a.size(); i++)
+	{
+		ab.push_back((a[i] + b[i]));
+	}
+	return ab;
+}
+//Multiplys a vector by a scalar value
+std::vector<double> VectorFuncs::VecMult(double a, std::vector<double> b)
+{
+	std::vector<double> vec;
+	for (int i = 0; i < b.size(); i++)
+	{
+		vec.push_back(a * b[i]);
+	}
+	return vec;
+}
+double VectorFuncs::DotProd(std::vector<double> a, std::vector<double> b)
+{
+	double ans = 0;
+	if (a.size() != b.size())
+	{
+		return -1;
+	}
+	for (int i = 0; i < a.size(); i++)
+	{
+		ans = ans + (a[i] * b[i]);
+	}
+	return ans;
+}
 
 
 /*
