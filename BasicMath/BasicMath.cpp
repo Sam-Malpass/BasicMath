@@ -66,7 +66,7 @@ double AdvFuncs::Power(double a, double b)
 }
 
 
-
+//Function for matrix multiplication - uses two multidimensional vectors
 std::vector<std::vector<double>> Matrixfuncs::MatrixMult(std::vector<std::vector<double>> a, std::vector<std::vector<double>> b)
 {
 	int rowsA = a.size();
