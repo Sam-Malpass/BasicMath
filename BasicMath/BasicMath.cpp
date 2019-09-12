@@ -188,6 +188,7 @@ double VectorFuncs::DotProd(std::vector<double> a, std::vector<double> b)
 	}
 	return ans;
 }
+//Finds the angle between two vectors
 double VectorFuncs::VecAng(std::vector<double> a, std::vector<double> b)
 {
 	double magA = VectorFuncs::VecMag(a);
@@ -195,7 +196,7 @@ double VectorFuncs::VecAng(std::vector<double> a, std::vector<double> b)
 	double denom = magA * magB;
 	double dotProd = VectorFuncs::DotProd(a, b);
 	double result = (dotProd / denom);
-	return result;
+	return acos(result);
 }
 
 /*

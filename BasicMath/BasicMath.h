@@ -79,6 +79,7 @@ namespace BasicMath
 		static std::vector<double> VecAdd(std::vector<double> a, std::vector<double> b);
 		static std::vector<double> VecMult(double a, std::vector<double> b);
 		static double DotProd(std::vector<double> a, std::vector<double> b);
+		static double VecAng(std::vector<double> a, std::vector<double> b);
 	};
 
 	class GeometryFuncs
