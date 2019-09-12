@@ -66,13 +66,13 @@ double AdvFuncs::Power(double a, double b)
 
 
 
-double** Matrixfuncs::MatrixMult(double** a, double** b)
+std::vector<std::vector<double>> MatrixMult(std::vector<std::vector<double>> a, std::vector<std::vector<double>> b)
 {
-	int rowsA = sizeof(a) / sizeof(a[0]);
-	int colsA = sizeof(a[0]) / sizeof(a[0][0]);
-	int rowsB = sizeof(b) / sizeof(b[0]);
-	int colsB = sizeof(b[0]) / sizeof(b[0][0]);
-	double** tmp;
+	int rowsA = a.size();
+	int colsA = a[0].size();
+	int rowsB = b.size();
+	int colsB = b[0].size();
+	std::vector<std::vector<double>> tmp;
 	if (colsA != rowsB)
 	{
 		return tmp;

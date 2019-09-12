@@ -40,6 +40,13 @@ namespace BasicMath
 		static double Power(double a, double b);
 	};
 
+	class Matrixfuncs
+	{
+	public:
+		static std::vector<std::vector<double>> MatrixMult(std::vector<std::vector<double>> a, std::vector<std::vector<double>> b);
+
+	};
+
 	class AlgebraFuncs
 	{
 	public:
@@ -75,10 +82,13 @@ namespace BasicMath
 		static double VecMag(std::vector<double> a);
 		//Function declaration for VecMagSq
 		static double VecMagSq(std::vector<double> a);
-
+		//Function declaration for VecAdd
 		static std::vector<double> VecAdd(std::vector<double> a, std::vector<double> b);
+		//Function declaration for VecMult
 		static std::vector<double> VecMult(double a, std::vector<double> b);
+		//Function declaration for DotProd
 		static double DotProd(std::vector<double> a, std::vector<double> b);
+		//Function declaration for VecAng
 		static double VecAng(std::vector<double> a, std::vector<double> b);
 	};
 

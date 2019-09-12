@@ -42,9 +42,9 @@ int main()
 	vector<double> res = VectorFuncs::Vec2Vec(veca, vecb);
 	cout << "A = (1, 0 , 3) and B = (-1, 4, 2) so A -> B = (" << res[0] << ", " << res[1] << ", " << res[2] << ")" << endl;
 	cout << "Magnitude of A is = " << VectorFuncs::VecMag(veca) << endl;
-
-
-
+	vector<vector<double>> tmpA = { {1.0, 2, 3}, {4, 5, 6} };
+	vector<vector<double>> tmpB = { {7, 8}, {9, 10}, {11, 12} };
+	vector<vector<double>> result = Matrixfuncs::MatrixMult(tmpA, tmpB);
 	cout << "End of test" << endl;
 }
 
