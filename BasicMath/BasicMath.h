@@ -71,7 +71,8 @@ namespace BasicMath
 	public:
 		//Function declaration for Vec2Vec
 		static std::vector<double> Vec2Vec(std::vector<double> a, std::vector<double> b);
-
+		//Function declaration for VecMag
+		static double VecMag(std::vector<double> a);
 	};
 
 	class GeometryFuncs

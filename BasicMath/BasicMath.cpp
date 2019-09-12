@@ -136,6 +136,16 @@ std::vector<double> VectorFuncs::Vec2Vec(std::vector<double> a, std::vector<doub
 	}
 	return ab;
 }
+//Calculates the magnitude of a vector
+double VectorFuncs::VecMag(std::vector<double> a)
+{
+	double tmp = 0;
+	for (int i = 0; i < a.size(); i++)
+	{
+		tmp = tmp + AdvFuncs::Power(a[i], 2);
+	}
+	return sqrt(tmp);
+}
 
 
 /*
