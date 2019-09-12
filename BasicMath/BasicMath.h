@@ -13,8 +13,8 @@ namespace BasicMath
 	public:
 		double getX();
 		double getY();
-		double setX(double a);
-		double setY(double b);
+		void setX(double a);
+		void setY(double b);
 		double setVals(double a, double b);
 	};
 	class CoreFuncs
@@ -114,13 +114,14 @@ namespace BasicMath
 		//Function declaration for SphereVol
 		static double SphereVol(double a);
 
-		//Function declaration for EulerPoly
-		static double EulerPoly(double a, double b, double c);
-
 		//Function declaration for IntAngPoly
 		static double IntAngPoly(double a);
 
 		//Function declaration for PointDist
-		static double PointDist()
+		static double PointDist(coordinate a, coordinate b);
+
+		//Function declaration for MidPoint
+		static coordinate MidPoint(coordinate a, coordinate b);
+
 	};
 }

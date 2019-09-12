@@ -4,31 +4,35 @@ using namespace BasicMath;
 /*
 	Functions for the coordinate class
 */
-double coordinate::setVals(double a, double b)
+
+// a is the value of the x-coordinate, b is the value of the y-coordinate
+double point::setVals(double a, double b)
 {
-	coordinate::x = a;
-	coordinate::y = b;
+	point::x = a;
+	point::y = b;
 }
-void coordinate::setX(double a)
+void point::setX(double a)
 {
-	coordinate::x = a;
+	point::x = a;
 }
-void coordinate::setY(double b)
+void point::setY(double b)
 {
-	coordinate::y = b;
+	point::y = b;
 }
-double coordinate::getX()
+double point::getX()
 {
-	return coordinate::x;
+	return point::x;
 }
-double coordinate::getY()
+double point::getY()
 {
-	return coordinate::y;
+	return point::y;
 }
 
 /*
 	Functions for the CoreFuncs class
 */
+
+//Basic functions for basic mathematics
 double CoreFuncs::Add(double a, double b)
 {
 	return a + b;
@@ -49,6 +53,8 @@ double CoreFuncs::Divide(double a, double b)
 /*
 	Functions for the AdvFuncs class
 */
+
+//Bring number a to the power of b
 double AdvFuncs::Power(double a, double b)
 {
 	double c = a;
@@ -61,6 +67,8 @@ double AdvFuncs::Power(double a, double b)
 /*
 	Functions for the AlgebraFuncs class
 */
+
+//Perform the quadratic formula where a is the coefficient of X^2, b is the coefficient of X and c is the constant
 std::vector<double> AlgebraFuncs::QuadraticFormula(double a, double b, double c)
 {
 	std::vector<double> data;
@@ -70,10 +78,12 @@ std::vector<double> AlgebraFuncs::QuadraticFormula(double a, double b, double c)
 	data.push_back(x2);
 	return data;
 }
+//Calculate the Discriminant of a quadratic equation, where a is the coefficient of X^2, b is the coefficient of X and c is the constant
 double AlgebraFuncs::Discriminant(double a, double b, double c)
 {
 	return AdvFuncs::Power(b, 2) - (4 * a * c);
 }
+//Calculates and returns the Vertex of the Parabola for a quadratic equation, where a is the coefficient of X^2, b is the coefficient of X and c is the constant
 std::vector<double> AlgebraFuncs::ParabolaVertex(double a, double b, double c)
 {
 	std::vector<double> vals;
@@ -87,14 +97,21 @@ std::vector<double> AlgebraFuncs::ParabolaVertex(double a, double b, double c)
 /*
 	Functions for the TrigFuncs Class
 */
+
+/*
+	Finds the angle between the hypotenuse and adjacent
+*/
+//Uses a as opposite and b as hypotenuse
 double TrigFuncs::SinAng(double a, double b)
 {
 	return asin(a / b);
 }
+//Uses a as adjacent and b as hypotenuse
 double TrigFuncs::CosAng(double a, double b)
 {
 	return acos(a / b);
 }
+//Uses a as opposite and b as adjacent
 double TrigFuncs::TanAng(double a, double b)
 {
 	return atan(a / b);
@@ -103,77 +120,95 @@ double TrigFuncs::TanAng(double a, double b)
 /*
 	Functions for the GeometryFuncs class
 */
+//Uses a as the length of a side
 double GeometryFuncs::SquareArea(double a)
 {
 	return a * a;
 }
+//Uses a as a width and b as a height
 double GeometryFuncs::RectangleArea(double a, double b)
 {
 	return a * b;
 }
+//Uses a as the base and b as the height
 double GeometryFuncs::TriangleArea(double a, double b)
 {
 	return ((a * b) / 2);
 }
+//Uses a as the large diagonal and b as the small diagonal
 double GeometryFuncs::RhombusArea(double a, double b)
 {
 	return ((a * b) / 2);
 }
+//Uses a as the large side, b as the small side and c as the height
 double GeometryFuncs::TrapezoidArea(double a, double b, double c)
 {
 	return (((a + b) / 2) * c);
 }
+//Uses a as the perimeter and a as the apothem
 double GeometryFuncs::PolygonArea(double a, double b)
 {
 	return ((a / 2) * b);
 }
+//Uses a as the radius
 double GeometryFuncs::CircleArea(double a)
 {
 	return (PI * AdvFuncs::Power(a, 2));
 }
+//Uses a as the radius and b as the slant height
 double GeometryFuncs::ConeArea(double a, double b)
 {
 	return ((PI * a) * b);
 }
+//Uses a as the radius
 double GeometryFuncs::SphereArea(double a)
 {
 	return (4 * (PI * AdvFuncs::Power(a, 2)));
 }
+//Uses a as the surface area of one side of the cube
 double GeometryFuncs::CubeVol(double a)
 {
 	return AdvFuncs::Power(a, 3);
 }
+//Uses a as the length, b as the width and c as the height
 double GeometryFuncs::CuboidVol(double a, double b, double c)
 {
 	return a * b * c;
 }
+//Uses a as the surface area of the base and b as the height of the prism
 double GeometryFuncs::RegPrismVol(double a, double b)
 {
 	return a * b;
 }
+//Uses a as the radius of the circular base and b as the height of the cyclinder
 double GeometryFuncs::CylinderVol(double a, double b)
 {
 	return (PI * AdvFuncs::Power(a, 2)) * b;
 }
+//Uses a as the area of the base and b as the height of the cone
 double GeometryFuncs::ConeVol(double a, double b)
 {
 	return (((1 / 3) * a) * b);
 }
+//Uses a as the radius of the sphere
 double GeometryFuncs::SphereVol(double a)
 {
 	return (4 / 3) * PI * AdvFuncs::Power(a, 3);
 }
+//Uses a as the number of sides of the polygon
 double GeometryFuncs::IntAngPoly(double a) 
 {
 	return (a - 2) * 180;
 }
-double GeometryFuncs::PointDist(coordinate a, coordinate b)
+//Uses a as one point and b as another point
+double GeometryFuncs::PointDist(point a, point b)
 {
 	return sqrt(AdvFuncs::Power((a.getX - b.getX), 2) + AdvFuncs::Power((a.getY - b.getY), 2));
 }
-coordinate GeometryFuncs::MidPoint(coordinate a, coordinate b)
+//Uses a as one point and b as another point
+point GeometryFuncs::MidPoint(point a, point b)
 {
-	/*
-	CONTINUE HERE
-	*/
+	point mid;
+	mid.setVals(((a.getX + b.getX) / 2), ((a.getY + b.getY) / 2));
+	return mid;
 }
