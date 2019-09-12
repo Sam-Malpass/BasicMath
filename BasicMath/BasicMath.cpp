@@ -188,7 +188,15 @@ double VectorFuncs::DotProd(std::vector<double> a, std::vector<double> b)
 	}
 	return ans;
 }
-
+double VectorFuncs::VecAng(std::vector<double> a, std::vector<double> b)
+{
+	double magA = VectorFuncs::VecMag(a);
+	double magB = VectorFuncs::VecMag(b);
+	double denom = magA * magB;
+	double dotProd = VectorFuncs::DotProd(a, b);
+	double result = (dotProd / denom);
+	return result;
+}
 
 /*
 	Functions for the GeometryFuncs class
