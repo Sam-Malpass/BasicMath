@@ -1,4 +1,5 @@
 #include "BasicMath.h"
+#include <iostream>
 using namespace BasicMath;
 
 /*
@@ -66,7 +67,7 @@ double AdvFuncs::Power(double a, double b)
 
 
 
-std::vector<std::vector<double>> MatrixMult(std::vector<std::vector<double>> a, std::vector<std::vector<double>> b)
+std::vector<std::vector<double>> Matrixfuncs::MatrixMult(std::vector<std::vector<double>> a, std::vector<std::vector<double>> b)
 {
 	int rowsA = a.size();
 	int colsA = a[0].size();
@@ -77,18 +78,23 @@ std::vector<std::vector<double>> MatrixMult(std::vector<std::vector<double>> a, 
 	{
 		return tmp;
 	}
-	double misc;
-	int colcount = 0;
+	double misc = 0;
+	std::vector<double> tmprow;
 	for (int i = 0; i < rowsA; i++)
 	{
-		misc = 0;
-		for (int j = 0; j < colsA; j++)
+		tmprow.clear();
+		for (int k = 0; k < colsB; k++)
 		{
-			misc = misc + (a[i][j] * b[j][i]);
+			misc = 0;
+			for (int j = 0; j < colsA; j++)
+			{
+				misc = misc + (a[i][j] * b[j][k]);
+			}
+			tmprow.push_back(misc);
 		}
-		tmp[i][colcount] = misc;
-		colcount++;
+		tmp.push_back(tmprow);
 	}
+	return tmp;
 }
 
 /*
