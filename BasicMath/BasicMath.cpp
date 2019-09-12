@@ -101,6 +101,7 @@ std::vector<double> AlgebraFuncs::ParabolaVertex(double a, double b, double c)
 /*
 	Finds the angle between the hypotenuse and adjacent
 */
+
 //Uses a as opposite and b as hypotenuse
 double TrigFuncs::SinAng(double a, double b)
 {
@@ -116,6 +117,26 @@ double TrigFuncs::TanAng(double a, double b)
 {
 	return atan(a / b);
 }
+
+/*
+	Functions for the VectorFuncs class
+*/
+
+//Calculates from vector a to vector b
+std::vector<double> VectorFuncs::Vec2Vec(std::vector<double> a, std::vector<double> b)
+{
+	std::vector<double> ab;
+	if (a.size != b.size)
+	{
+		return ab;
+	}
+	for (int i = 0; i < a.size; i++)
+	{
+		ab.push_back((b[i] - a[i]));
+	}
+	return ab;
+}
+
 
 /*
 	Functions for the GeometryFuncs class

@@ -6,7 +6,7 @@
 
 namespace BasicMath
 {
-	class coordinate
+	class point
 	{
 		double x;
 		double y;
@@ -66,6 +66,14 @@ namespace BasicMath
 		static double TanAng(double a, double b);
 	};
 
+	class VectorFuncs
+	{
+	public:
+		//Function declaration for Vec2Vec
+		static std::vector<double> Vec2Vec(std::vector<double> a, std::vector<double> b);
+
+	};
+
 	class GeometryFuncs
 	{
 	public:
@@ -118,10 +126,9 @@ namespace BasicMath
 		static double IntAngPoly(double a);
 
 		//Function declaration for PointDist
-		static double PointDist(coordinate a, coordinate b);
+		static double PointDist(point a, point b);
 
 		//Function declaration for MidPoint
-		static coordinate MidPoint(coordinate a, coordinate b);
-
+		static point MidPoint(point a, point b);
 	};
 }
