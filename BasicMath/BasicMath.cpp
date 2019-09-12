@@ -64,6 +64,33 @@ double AdvFuncs::Power(double a, double b)
 	return c;
 }
 
+
+
+double** Matrixfuncs::MatrixMult(double** a, double** b)
+{
+	int rowsA = sizeof(a) / sizeof(a[0]);
+	int colsA = sizeof(a[0]) / sizeof(a[0][0]);
+	int rowsB = sizeof(b) / sizeof(b[0]);
+	int colsB = sizeof(b[0]) / sizeof(b[0][0]);
+	double** tmp;
+	if (colsA != rowsB)
+	{
+		return tmp;
+	}
+	double misc;
+	int colcount = 0;
+	for (int i = 0; i < rowsA; i++)
+	{
+		misc = 0;
+		for (int j = 0; j < colsA; j++)
+		{
+			misc = misc + (a[i][j] * b[j][i]);
+		}
+		tmp[i][colcount] = misc;
+		colcount++;
+	}
+}
+
 /*
 	Functions for the AlgebraFuncs class
 */
