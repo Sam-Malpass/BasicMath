@@ -15,7 +15,7 @@ namespace BasicMath
 		double getY();
 		void setX(double a);
 		void setY(double b);
-		double setVals(double a, double b);
+		void setVals(double a, double b);
 	};
 	class CoreFuncs
 	{

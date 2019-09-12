@@ -31,8 +31,16 @@ int main()
 	c = 3;
 	vector<double> tst = AlgebraFuncs::QuadraticFormula(a, b, c);
 	cout << "For equation X^2 + 4X + 3: X = " << tst[0] << " or X = " << tst[1];
-
-
+	vector<double> veca;
+	veca.push_back(1);
+	veca.push_back(0);
+	veca.push_back(3);
+	vector<double> vecb;
+	vecb.push_back(-1);
+	vecb.push_back(4);
+	vecb.push_back(2);
+	vector<double> res = VectorFuncs::Vec2Vec(veca, vecb);
+	cout << "A = (1, 0 , 3) and B = (-1, 4, 2) so A -> B = (" << res[0] << ", " << res[1] << ", " << res[2] << ")" << endl;
 
 
 

@@ -6,7 +6,7 @@ using namespace BasicMath;
 */
 
 // a is the value of the x-coordinate, b is the value of the y-coordinate
-double point::setVals(double a, double b)
+void point::setVals(double a, double b)
 {
 	point::x = a;
 	point::y = b;
@@ -126,11 +126,11 @@ double TrigFuncs::TanAng(double a, double b)
 std::vector<double> VectorFuncs::Vec2Vec(std::vector<double> a, std::vector<double> b)
 {
 	std::vector<double> ab;
-	if (a.size != b.size)
+	if (a.size() != b.size())
 	{
 		return ab;
 	}
-	for (int i = 0; i < a.size; i++)
+	for (int i = 0; i < a.size(); i++)
 	{
 		ab.push_back((b[i] - a[i]));
 	}
@@ -224,12 +224,12 @@ double GeometryFuncs::IntAngPoly(double a)
 //Uses a as one point and b as another point
 double GeometryFuncs::PointDist(point a, point b)
 {
-	return sqrt(AdvFuncs::Power((a.getX - b.getX), 2) + AdvFuncs::Power((a.getY - b.getY), 2));
+	return sqrt(AdvFuncs::Power((a.getX() - b.getX()), 2) + AdvFuncs::Power((a.getY() - b.getY()), 2));
 }
 //Uses a as one point and b as another point
 point GeometryFuncs::MidPoint(point a, point b)
 {
 	point mid;
-	mid.setVals(((a.getX + b.getX) / 2), ((a.getY + b.getY) / 2));
+	mid.setVals(((a.getX() + b.getX()) / 2), ((a.getY() + b.getY()) / 2));
 	return mid;
 }
